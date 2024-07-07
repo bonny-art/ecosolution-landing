@@ -63,12 +63,17 @@ export const CloseButton = styled.button`
   font-size: 20px;
 
   color: ${({ theme }) => theme.colors.white};
+  transition: color ${({ theme }) => theme.animation.transition};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.green};
+  }
 
   svg {
     width: 20px;
     height: 20px;
 
-    fill: ${({ theme }) => theme.colors.white};
+    stroke: currentColor;
   }
 `;
 

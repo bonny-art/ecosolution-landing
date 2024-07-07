@@ -9,10 +9,11 @@ export const theme = Object.freeze({
     gray: '#bdbdbd',
 
     white: '#f3f5fa',
+    offWhite: '#ffffff',
   },
 
   animation: {
-    transition: '0.3s ease',
+    transition: '1.3s ease',
   },
 
   mediaQueries: {

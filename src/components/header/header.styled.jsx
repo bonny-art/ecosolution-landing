@@ -1,14 +1,16 @@
 import styled from '@emotion/styled';
 
 export const Header = styled.header`
-  padding: 36px 0 140px;
+  position: fixed;
+  width: 100%;
+  padding: 36px 0;
 
-  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
-    padding-bottom: 164px;
+  &.scrolled {
+    background-color: ${({ theme }) => theme.colors.offWhite};
   }
 
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
-    padding: 24px 0 200px;
+    padding: 24px 0 24px;
   }
 `;
 
@@ -38,9 +40,39 @@ export const Section = styled.div`
   }
 `;
 
+export const LogoGroup = styled.div`
+  display: flex;
+  gap: 4px;
+  align-items: end;
+
+  & .name {
+    transition: fill ${({ theme }) => theme.animation.transition};
+  }
+
+  &:hover .name {
+    fill: ${({ theme }) => theme.colors.green};
+  }
+`;
+
 export const Logo = styled.svg`
-  width: 269px;
+  width: 31px;
+  height: 18px;
+
+  margin-bottom: 8px;
+`;
+
+export const Name = styled.svg`
+  width: 170px;
   height: 40px;
+
+  fill: ${({ theme }) => theme.colors.black};
+`;
+
+export const Slogan = styled.svg`
+  width: 60px;
+  height: 18px;
+
+  margin-bottom: 8px;
 `;
 
 export const MenuBlock = styled.div`
@@ -58,6 +90,11 @@ export const MenuButton = styled.button`
   height: 39px;
 
   background-color: ${({ theme }) => theme.colors.greenLight};
+  transition: background-color ${({ theme }) => theme.animation.transition};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.green};
+  }
 `;
 
 export const MenuIcon = styled.svg`

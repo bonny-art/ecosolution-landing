@@ -7,12 +7,17 @@ export const MenuItem = styled.li`
 
   font-size: 24px;
   line-height: 29px;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.offWhite}3f;
+  transition: color ${({ theme }) => theme.animation.transition};
 
   cursor: pointer;
 
   &.active {
     color: ${({ theme }) => theme.colors.green};
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.white};
   }
 
   &:not(:last-child) {
@@ -23,7 +28,6 @@ export const MenuItem = styled.li`
     width: 16px;
     height: 16px;
 
-    /* stroke: ${({ theme }) => theme.colors.white}; */
     stroke: currentColor;
   }
 `;

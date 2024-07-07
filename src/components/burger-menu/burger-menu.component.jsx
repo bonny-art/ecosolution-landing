@@ -19,7 +19,6 @@ export const BurgerMenu = ({ closeModal }) => {
     scroller.scrollTo(section, {
       duration: 500,
       smooth: true,
-      // offset: -50,
     });
   };
 

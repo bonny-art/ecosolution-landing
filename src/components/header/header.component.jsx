@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import icons from '../../assets/sprite.svg';
 import * as Styled from './header.styled';
 import { useAppStore } from 'store/store';
-import { ButtonWithDot } from 'shared/components/button-with-dot.component';
+
 import { Modal } from 'shared/modal/modal.component';
 import { BurgerMenu } from 'components/burger-menu/burger-menu.component';
+import { ButtonWithDot } from 'shared/components/button-with-dot/button-with-dot.component';
 
 export const Header = () => {
   const appStore = useAppStore();
   const { isMobile, isTablet, isDesktop } = appStore;
   const [isModalOpened, setIsModalOpened] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const openModal = () => {
     setIsModalOpened(true);
@@ -19,17 +21,40 @@ export const Header = () => {
     setIsModalOpened(false);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <Styled.Header>
+      <Styled.Header className={isScrolled ? 'scrolled' : ''}>
         <Styled.Section
           $isMobile={isMobile}
           $isTablet={isTablet}
           $isDesktop={isDesktop}
         >
-          <Styled.Logo>
-            <use href={`${icons}#logo`} />
-          </Styled.Logo>
+          <Styled.LogoGroup>
+            <Styled.Logo>
+              <use href={`${icons}#logo`} />
+            </Styled.Logo>
+            <Styled.Name className="name">
+              <use href={`${icons}#name`} />
+            </Styled.Name>
+            <Styled.Slogan>
+              <use href={`${icons}#slogan`} />
+            </Styled.Slogan>
+          </Styled.LogoGroup>
 
           <Styled.MenuBlock>
             <Styled.MenuButton onClick={openModal}>
