@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ecosolution-landing/static/css/main.cd2e038f.css",
-    "main.js": "/ecosolution-landing/static/js/main.91c72c2b.js",
+    "main.js": "/ecosolution-landing/static/js/main.cdb7fabf.js",
     "static/media/fira-sans-regular.ttf": "/ecosolution-landing/static/media/fira-sans-regular.f4eb295ecc2fb842d61c.ttf",
     "static/media/fira-sans-light.ttf": "/ecosolution-landing/static/media/fira-sans-light.7ece67e11e181a7292ef.ttf",
     "static/media/hero-desktop@2x.jpg": "/ecosolution-landing/static/media/hero-desktop@2x.0cc99f9111119040dfe8.jpg",
@@ -15,10 +15,10 @@
     "static/media/sprite.svg": "/ecosolution-landing/static/media/sprite.63918ff7394c3a73ee300ed9fe0c75c7.svg",
     "index.html": "/ecosolution-landing/index.html",
     "main.cd2e038f.css.map": "/ecosolution-landing/static/css/main.cd2e038f.css.map",
-    "main.91c72c2b.js.map": "/ecosolution-landing/static/js/main.91c72c2b.js.map"
+    "main.cdb7fabf.js.map": "/ecosolution-landing/static/js/main.cdb7fabf.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.91c72c2b.js"
+    "static/js/main.cdb7fabf.js"
   ]
 }
