@@ -57,7 +57,8 @@ export const GlobalStyles = css`
   h5,
   h6 {
     font-family: 'Oswald', sans-serif;
-    font-size: 48px;
+    font-weight: 400;
+    font-size: 36px;
     line-height: 1;
     text-transform: uppercase;
   }
