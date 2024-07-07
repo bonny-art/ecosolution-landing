@@ -22,7 +22,7 @@ export const Container = styled.div`
     transform: translate(-50%, 0%);
 
     width: calc(100% - 40px);
-    max-width: 440px;
+    max-width: 400px;
     height: calc(100% - 56px);
   }
 

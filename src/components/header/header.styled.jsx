@@ -5,6 +5,9 @@ export const Header = styled.header`
   width: 100%;
   padding: 36px 0;
 
+  background-color: ${({ theme }) => theme.colors.white};
+  transition: background-color ${({ theme }) => theme.animation.transition};
+
   &.scrolled {
     background-color: ${({ theme }) => theme.colors.offWhite};
   }
