@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import * as Styled from './main.styled';
 import { useAppStore } from 'store/store';
 import { ButtonWithBorder } from 'shared/components/button-with-border/button-with-border.component';
+import { useInView } from 'react-intersection-observer';
 
 import imageMobile1x from '../../assets/images/main/hero-mobile@1x.jpg';
 import imageMobile2x from '../../assets/images/main/hero-mobile@2x.jpg';
@@ -12,7 +13,7 @@ import imageDesktop2x from '../../assets/images/main/hero-desktop@2x.jpg';
 
 export const Main = () => {
   const appStore = useAppStore();
-  const { isMobile, isTablet, isDesktop } = appStore;
+  const { isMobile, isTablet, isDesktop, setActiveSection } = appStore;
 
   const address = '79005, Ukraine, Lvivstreet. Shota Rustaveli, 7';
 
@@ -23,10 +24,21 @@ export const Main = () => {
     );
   };
 
+  const [refMain, inViewMain] = useInView({
+    rootMargin: `-45% 0px -45% 0px`,
+  });
+
+  useEffect(() => {
+    if (inViewMain) {
+      setActiveSection('main');
+    }
+  }, [inViewMain, setActiveSection]);
+
   return (
     <>
-      <Styled.Section name="main">
+      <Styled.Section name="main" id="main">
         <Styled.Container
+          ref={refMain}
           $isMobile={isMobile}
           $isTablet={isTablet}
           $isDesktop={isDesktop}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import icons from '../../assets/sprite.svg';
 import * as Styled from './about.styled';
 import { useAppStore } from 'store/store';
@@ -14,15 +14,27 @@ import image02Tablet2x from '../../assets/images/about/img-02-tablet@2x.jpg';
 
 import image02Desktop1x from '../../assets/images/about/img-02-desktop@1x.jpg';
 import image02Desktop2x from '../../assets/images/about/img-02-desktop@2x.jpg';
+import { useInView } from 'react-intersection-observer';
 
 export const About = () => {
   const appStore = useAppStore();
-  const { isMobile, isTablet, isDesktop } = appStore;
+  const { isMobile, isTablet, isDesktop, setActiveSection } = appStore;
+
+  const [refAbout, inViewAbout] = useInView({
+    rootMargin: `-45% 0px -45% 0px`,
+  });
+
+  useEffect(() => {
+    if (inViewAbout) {
+      setActiveSection('about');
+    }
+  }, [inViewAbout, setActiveSection]);
 
   return (
     <>
-      <Styled.Section name="about">
+      <Styled.Section name="about" id="about">
         <Styled.Container
+          ref={refAbout}
           $isMobile={isMobile}
           $isTablet={isTablet}
           $isDesktop={isDesktop}
