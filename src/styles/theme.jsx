@@ -14,4 +14,11 @@ export const theme = Object.freeze({
   animation: {
     transition: '0.3s ease',
   },
+
+  mediaQueries: {
+    maxMobile: 'max-width: 767.9px',
+    minTablet: 'min-width: 768px',
+    maxTablet: 'max-width: 1279.9px',
+    minDesktop: 'min-width: 1280px',
+  },
 });

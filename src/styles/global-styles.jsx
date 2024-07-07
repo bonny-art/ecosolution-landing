@@ -1,10 +1,10 @@
 import { css } from '@emotion/react';
 import { theme } from 'styles/theme';
 
-import FiraSansLight from '../fonts/FiraSans-Light.ttf';
-import FiraSansRegular from '../fonts/FiraSans-Regular.ttf';
-import OswaldRegular from '../fonts/Oswald-Regular.ttf';
-import OswaldBold from '../fonts/Oswald-Bold.ttf';
+import FiraSansLight from '../fonts/fira-sans-light.ttf';
+import FiraSansRegular from '../fonts/fira-sans-regular.ttf';
+import OswaldRegular from '../fonts/oswald-regular.ttf';
+import OswaldBold from '../fonts/oswald-bold.ttf';
 
 export const GlobalStyles = css`
   @font-face {
@@ -42,7 +42,6 @@ export const GlobalStyles = css`
     font-weight: 400;
     font-size: 16px;
     letter-spacing: -0.04em;
-    text-align: justify;
     font-style: normal;
     color: ${theme.colors.black};
 
