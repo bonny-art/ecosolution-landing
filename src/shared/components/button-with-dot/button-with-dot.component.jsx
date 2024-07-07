@@ -6,14 +6,17 @@ import { scroller } from 'react-scroll';
 
 export const ButtonWithDot = ({ children, goTo, width, type = 'button' }) => {
   const appStore = useAppStore();
-  const { setActiveSection } = appStore;
+  const { isDesktop, setActiveSection } = appStore;
 
   const handleClick = section => () => {
     setActiveSection(section);
 
+    const offset = isDesktop ? -120 : -145;
+
     scroller.scrollTo(section, {
       duration: 500,
       smooth: true,
+      offset: offset,
     });
   };
 

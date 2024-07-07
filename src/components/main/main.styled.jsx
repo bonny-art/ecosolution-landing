@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
+import { Element } from 'react-scroll';
 
-export const Header = styled.header`
+export const Section = styled(Element)`
   width: 100%;
   padding: 216px 0 36px;
 
@@ -13,7 +14,7 @@ export const Header = styled.header`
   }
 `;
 
-export const Section = styled.div`
+export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
@@ -35,6 +36,8 @@ export const Section = styled.div`
 
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
     width: 1280px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 `;
 

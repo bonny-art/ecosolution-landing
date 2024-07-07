@@ -5,7 +5,8 @@ export const Header = styled.header`
   width: 100%;
   padding: 36px 0;
 
-  background-color: ${({ theme }) => theme.colors.white};
+  z-index: 1;
+
   transition: background-color ${({ theme }) => theme.animation.transition};
 
   &.scrolled {
@@ -40,6 +41,8 @@ export const Section = styled.div`
 
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
     width: 1280px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 `;
 

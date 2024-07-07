@@ -10,15 +10,18 @@ import { MenuItem } from 'components/menu-item/menu-item.component';
 
 export const BurgerMenu = ({ closeModal }) => {
   const appStore = useAppStore();
-  const { activeSection, setActiveSection } = appStore;
+  const { isDesktop, activeSection, setActiveSection } = appStore;
 
   const closeWithScroll = section => () => {
     closeModal();
     setActiveSection(section);
 
+    const offset = isDesktop ? -120 : -145;
+
     scroller.scrollTo(section, {
       duration: 500,
       smooth: true,
+      offset: offset,
     });
   };
 

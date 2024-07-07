@@ -15,7 +15,7 @@ export const Container = styled.div`
   backdrop-filter: blur(25px);
   background: ${({ theme }) => theme.colors.black}bf;
 
-  z-index: 2;
+  z-index: 3;
 
   @media (${({ theme }) => theme.mediaQueries.maxMobile}) {
     left: 50%;
@@ -58,7 +58,6 @@ export const CloseButton = styled.button`
   background-color: transparent;
 
   cursor: pointer;
-  z-index: 2;
 
   font-size: 20px;
 

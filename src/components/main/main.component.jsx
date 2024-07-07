@@ -25,8 +25,8 @@ export const Main = () => {
 
   return (
     <>
-      <Styled.Header>
-        <Styled.Section
+      <Styled.Section name="main">
+        <Styled.Container
           $isMobile={isMobile}
           $isTablet={isTablet}
           $isDesktop={isDesktop}
@@ -75,8 +75,8 @@ export const Main = () => {
               />
             )}
           </div>
-        </Styled.Section>
-      </Styled.Header>
+        </Styled.Container>
+      </Styled.Section>
     </>
   );
 };
