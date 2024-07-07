@@ -46,7 +46,7 @@ export const TextBlock = styled.div`
   margin-bottom: 36px;
 
   h1 {
-    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
     font-weight: 400;
     font-size: 36px;
     line-height: 1;
