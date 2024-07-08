@@ -4,13 +4,14 @@ import { useAppStore } from 'store/store';
 import icons from '../../assets/sprite.svg';
 
 import { useInView } from 'react-intersection-observer';
-import { slides } from 'constants/slides';
+
 import { Slide } from 'components/slide/slide.component';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Navigation } from 'swiper/modules';
+import { cases } from 'constants/cases';
 
 export const Cases = () => {
   const appStore = useAppStore();
@@ -28,7 +29,7 @@ export const Cases = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const totalSlides = slides.length;
+  const totalSlides = cases.length;
 
   const prevSlide = () => {
     setCurrentSlide(prevSlide =>
@@ -98,7 +99,7 @@ export const Cases = () => {
             modules={[Navigation]}
             className="mySwiper"
           >
-            {slides.map((slide, index) => (
+            {cases.map((slide, index) => (
               <SwiperSlide key={slide.id}>
                 <Slide key={slide.id} draggable slide={slide} />
               </SwiperSlide>

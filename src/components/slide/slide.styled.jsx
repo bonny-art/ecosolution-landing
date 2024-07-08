@@ -4,7 +4,7 @@ export const Slide = styled.div`
   background-color: ${({ theme }) => theme.colors.grayLight};
 
   &:hover {
-    a {
+    button {
       background-color: ${({ theme }) => theme.colors.black};
       color: ${({ theme }) => theme.colors.green};
     }
@@ -37,7 +37,7 @@ export const NameBox = styled.div`
     font-size: 18px;
   }
 
-  a {
+  button {
     display: flex;
     justify-content: center;
     align-items: center;

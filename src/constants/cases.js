@@ -9,7 +9,7 @@ import case042x from '../assets/images/cases/case-04@2x.jpg';
 import case051x from '../assets/images/cases/case-05@1x.jpg';
 import case052x from '../assets/images/cases/case-05@2x.jpg';
 
-export const slides = [
+export const cases = [
   {
     id: 1,
     imageUrl: case011x,

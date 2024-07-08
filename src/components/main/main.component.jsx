@@ -15,7 +15,7 @@ export const Main = () => {
   const appStore = useAppStore();
   const { isMobile, isTablet, isDesktop, setActiveSection } = appStore;
 
-  const address = '79005, Ukraine, Lvivstreet. Shota Rustaveli, 7';
+  const address = '79005, Ukraine, Lviv street. Shota Rustaveli, 7';
 
   const openGoogleMaps = () => {
     window.open(
