@@ -13,7 +13,7 @@ export const theme = Object.freeze({
   },
 
   animation: {
-    transition: '1.3s ease',
+    transition: '0.3s ease',
   },
 
   mediaQueries: {

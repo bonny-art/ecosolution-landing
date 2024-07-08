@@ -15,7 +15,7 @@ export const Container = styled.div`
   backdrop-filter: blur(25px);
   background: ${({ theme }) => theme.colors.black}bf;
 
-  z-index: 3;
+  z-index: 4;
 
   @media (${({ theme }) => theme.mediaQueries.maxMobile}) {
     left: 50%;

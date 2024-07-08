@@ -5,7 +5,7 @@ export const Header = styled.header`
   width: 100%;
   padding: 36px 0;
 
-  z-index: 1;
+  z-index: 2;
 
   transition: background-color ${({ theme }) => theme.animation.transition};
 

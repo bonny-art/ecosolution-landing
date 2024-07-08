@@ -10,5 +10,5 @@ export const Backdrop = styled.div`
 
   backdrop-filter: blur(4px);
   background-color: ${({ theme }) => theme.colors.greenLight}3f;
-  z-index: 2;
+  z-index: 3;
 `;

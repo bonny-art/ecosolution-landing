@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Slide = styled.div`
+  z-index: 1;
   background-color: ${({ theme }) => theme.colors.grayLight};
 
   &:hover {

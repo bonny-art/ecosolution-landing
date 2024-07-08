@@ -14,8 +14,7 @@ import { useAppStore } from 'store/store';
 
 export const App = () => {
   const appStore = useAppStore();
-  const { setDevice, activeSection } = appStore;
-  console.log('🚀 ~ activeSection:', activeSection);
+  const { setDevice } = appStore;
 
   const isMobile = useMediaQuery({ query: '(max-width: 767.9px)' });
   const isTablet = useMediaQuery({
@@ -34,13 +33,12 @@ export const App = () => {
       <Header />
 
       <Main />
-
       <About />
-
       <Electricity />
       <Cases />
       <FAQ />
       <ContactUs />
+
       <Footer />
     </>
   );

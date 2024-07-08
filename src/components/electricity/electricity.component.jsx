@@ -24,13 +24,13 @@ export const Electricity = () => {
 
   useEffect(() => {
     if (inViewMain) {
-      setActiveSection('main');
+      setActiveSection('electricity');
     }
   }, [inViewMain, setActiveSection]);
 
   return (
     <>
-      <Styled.Section name="main" id="main">
+      <Styled.Section name="electricity" id="electricity">
         <Styled.Container
           ref={refMain}
           $isMobile={isMobile}

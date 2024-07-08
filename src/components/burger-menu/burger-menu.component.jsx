@@ -13,8 +13,8 @@ export const BurgerMenu = ({ closeModal }) => {
   const { isDesktop, activeSection, setActiveSection } = appStore;
 
   const closeWithScroll = section => () => {
-    closeModal();
     setActiveSection(section);
+    closeModal();
 
     const offset = isDesktop ? -120 : -145;
 
