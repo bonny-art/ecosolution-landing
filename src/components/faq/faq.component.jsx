@@ -1,6 +1,6 @@
 import { FAQItem } from 'components/faq-item/faq-item.component';
 import { faqs } from 'constants/faqs';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useAppStore } from 'store/store';
 import * as Styled from './faq.styled';
@@ -26,53 +26,68 @@ export const FAQ = () => {
     setOpenIndex(index === openIndex ? openIndex : index);
   };
 
-  const containerRef = useRef(null);
-  const [containerHeight, setContainerHeight] = useState(0);
-
-  useEffect(() => {
-    if (containerRef.current) {
-      setTimeout(() => {
-        const height = containerRef.current.clientHeight;
-        setContainerHeight(height);
-      }, 350);
-    }
-  }, [openIndex]);
-
   return (
-    <>
-      <div></div>
-      <Styled.Section name="main" id="main">
-        <Styled.Container
-          containerHeight={containerHeight}
-          ref={refMain}
-          $isMobile={isMobile}
-          $isTablet={isTablet}
-          $isDesktop={isDesktop}
-        >
-          <Styled.Title>
-            <p>Frequently Asked Questions</p>
-          </Styled.Title>
+    <Styled.Section name="main" id="main">
+      <Styled.Container
+        ref={refMain}
+        $isMobile={isMobile}
+        $isTablet={isTablet}
+        $isDesktop={isDesktop}
+      >
+        {isMobile ? (
+          <>
+            <Styled.Title>
+              <h2>Frequently Asked Questions</h2>
+            </Styled.Title>
 
-          <Styled.Accordion ref={containerRef}>
-            {faqs.map((faq, index) => (
-              <FAQItem
-                key={index}
-                question={faq.question}
-                answer={faq.answer}
-                isOpen={index === openIndex}
-                toggleOpen={toggleFAQ(index)}
-              />
-            ))}
-          </Styled.Accordion>
+            <Styled.Accordion>
+              {faqs.map((faq, index) => (
+                <FAQItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={index === openIndex}
+                  toggleOpen={toggleFAQ(index)}
+                />
+              ))}
+            </Styled.Accordion>
 
-          <Styled.ButtonBox>
-            <p>Didn't find the answer to your question? </p>
-            <ButtonWithDot goTo="contact-us" width="130px">
-              Contact Us
-            </ButtonWithDot>
-          </Styled.ButtonBox>
-        </Styled.Container>
-      </Styled.Section>
-    </>
+            <Styled.ButtonBox>
+              <p>Didn't find the answer to your question? </p>
+              <ButtonWithDot goTo="contact-us" width="130px">
+                Contact Us
+              </ButtonWithDot>
+            </Styled.ButtonBox>
+          </>
+        ) : (
+          <>
+            <Styled.Accordion>
+              {faqs.map((faq, index) => (
+                <FAQItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={index === openIndex}
+                  toggleOpen={toggleFAQ(index)}
+                />
+              ))}
+            </Styled.Accordion>
+
+            <Styled.Sidebar>
+              <Styled.Title>
+                <h2>Frequently Asked Questions</h2>
+              </Styled.Title>
+
+              <Styled.ButtonBox>
+                <p>Didn't find the answer to your question? </p>
+                <ButtonWithDot goTo="contact-us" width="130px">
+                  Contact Us
+                </ButtonWithDot>
+              </Styled.ButtonBox>
+            </Styled.Sidebar>
+          </>
+        )}
+      </Styled.Container>
+    </Styled.Section>
   );
 };

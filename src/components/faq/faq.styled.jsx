@@ -33,45 +33,58 @@ export const Container = styled.div`
     padding-left: 30px;
     padding-right: 30px;
 
-    flex-wrap: wrap;
-    align-content: space-between;
-    height: ${props => props.containerHeight}px;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 697px;
   }
 
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
     width: 1280px;
     padding-left: 20px;
     padding-right: 20px;
+
+    height: 525px;
   }
 `;
 
-export const Title = styled.h2`
-  margin-bottom: 24px;
-
-  font-family: 'Oswald', sans-serif;
-  font-size: 28px;
-
-  p {
-  }
-
+export const Sidebar = styled.div`
   @media (${({ theme }) => theme.mediaQueries.minTablet}) {
-    width: 347px;
-    order: 2;
-    align-self: flex-start;
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    font-size: 36px;
+    width: 347px;
   }
 
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
     width: 520px;
+  }
+`;
+
+export const Title = styled.div`
+  margin-bottom: 24px;
+
+  h2 {
+    width: 300px;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+    h2 {
+      font-size: 36px;
+    }
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
     display: flex;
     justify-content: center;
 
-    font-size: 48px;
+    h2 {
+      width: 350px;
 
-    p {
-      width: 380px;
+      font-size: 48px;
     }
   }
 `;
@@ -79,8 +92,6 @@ export const Title = styled.h2`
 export const Accordion = styled.div`
   @media (${({ theme }) => theme.mediaQueries.minTablet}) {
     width: 342px;
-    order: 1;
-    align-self: stretch;
   }
 
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
