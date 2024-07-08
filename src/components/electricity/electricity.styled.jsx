@@ -91,8 +91,10 @@ export const Title = styled.h2`
 
 export const Value = styled.p`
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
+
+  width: 314px;
 
   font-family: 'Oswald', sans-serif;
   font-size: 24px;
@@ -106,9 +108,9 @@ export const Value = styled.p`
   }
 
   @media (${({ theme }) => theme.mediaQueries.minTablet}) {
-    gap: 24px;
+    width: 634px;
 
-    font-size: 36px;
+    font-size: 28px;
 
     span {
       font-size: 100px;
@@ -116,6 +118,8 @@ export const Value = styled.p`
   }
 
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+    width: 1028px;
+
     font-size: 48px;
 
     span {

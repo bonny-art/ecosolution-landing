@@ -41,6 +41,9 @@ export const Electricity = () => {
           <Styled.Value>
             <span>{formatNumber(electricity, 'en-US')}</span>kWh
           </Styled.Value>
+          <Styled.Value>
+            <span>{formatNumber(1799999999, 'en-US')}</span>kWh
+          </Styled.Value>
         </Styled.Container>
       </Styled.Section>
     </>
