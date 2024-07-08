@@ -16,8 +16,8 @@ export const FAQItem = ({ question, answer, isOpen, toggleOpen }) => {
   return (
     <Styled.Item>
       <Styled.Question onClick={toggleOpen}>
-        <Styled.Icon>
-          <use href={`${icons}#plus`}></use>
+        <Styled.Icon isOpen={isOpen}>
+          <use href={`${icons}#${isOpen ? 'minus' : 'plus'}`}></use>
         </Styled.Icon>
         <span>{question}</span>
       </Styled.Question>

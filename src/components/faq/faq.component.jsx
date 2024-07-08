@@ -34,7 +34,7 @@ export const FAQ = () => {
       setTimeout(() => {
         const height = containerRef.current.clientHeight;
         setContainerHeight(height);
-      }, 30);
+      }, 350);
     }
   }, [openIndex]);
 
@@ -49,7 +49,9 @@ export const FAQ = () => {
           $isTablet={isTablet}
           $isDesktop={isDesktop}
         >
-          <Styled.Title>Frequently Asked Questions</Styled.Title>
+          <Styled.Title>
+            <p>Frequently Asked Questions</p>
+          </Styled.Title>
 
           <Styled.Accordion ref={containerRef}>
             {faqs.map((faq, index) => (
