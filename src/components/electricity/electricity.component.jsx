@@ -10,7 +10,7 @@ export const Electricity = () => {
   const { isMobile, isTablet, isDesktop, setActiveSection } = appStore;
   const [electricity, setElectricity] = useState(Math.floor(Date.now() / 1000));
 
-  const [refMain, inViewMain] = useInView({
+  const [refElectricity, inViewElectricity] = useInView({
     rootMargin: `-45% 0px -45% 0px`,
   });
 
@@ -23,16 +23,16 @@ export const Electricity = () => {
   }, []);
 
   useEffect(() => {
-    if (inViewMain) {
+    if (inViewElectricity) {
       setActiveSection('electricity');
     }
-  }, [inViewMain, setActiveSection]);
+  }, [inViewElectricity, setActiveSection]);
 
   return (
     <>
       <Styled.Section name="electricity" id="electricity">
         <Styled.Container
-          ref={refMain}
+          ref={refElectricity}
           $isMobile={isMobile}
           $isTablet={isTablet}
           $isDesktop={isDesktop}

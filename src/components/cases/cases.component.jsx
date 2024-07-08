@@ -17,15 +17,15 @@ export const Cases = () => {
   const appStore = useAppStore();
   const { isMobile, isTablet, isDesktop, setActiveSection } = appStore;
 
-  const [refMain, inViewMain] = useInView({
+  const [refCases, inViewCases] = useInView({
     rootMargin: `-45% 0px -45% 0px`,
   });
 
   useEffect(() => {
-    if (inViewMain) {
+    if (inViewCases) {
       setActiveSection('cases');
     }
-  }, [inViewMain, setActiveSection]);
+  }, [inViewCases, setActiveSection]);
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -47,7 +47,7 @@ export const Cases = () => {
     <>
       <Styled.Section name="cases" id="cases">
         <Styled.Container
-          ref={refMain}
+          ref={refCases}
           $isMobile={isMobile}
           $isTablet={isTablet}
           $isDesktop={isDesktop}

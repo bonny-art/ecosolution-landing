@@ -10,15 +10,16 @@ export const FAQ = () => {
   const appStore = useAppStore();
   const { isMobile, isTablet, isDesktop, setActiveSection } = appStore;
 
-  const [refMain, inViewMain] = useInView({
+  const [refFaq, inViewFaq] = useInView({
     rootMargin: `-45% 0px -45% 0px`,
   });
 
   useEffect(() => {
-    if (inViewMain) {
-      setActiveSection('main');
+    if (inViewFaq) {
+      console.log('🚀 ~ inViewFaq:', inViewFaq);
+      setActiveSection('faq');
     }
-  }, [inViewMain, setActiveSection]);
+  }, [inViewFaq, setActiveSection]);
 
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -27,9 +28,9 @@ export const FAQ = () => {
   };
 
   return (
-    <Styled.Section name="main" id="main">
+    <Styled.Section name="faq" id="faq">
       <Styled.Container
-        ref={refMain}
+        ref={refFaq}
         $isMobile={isMobile}
         $isTablet={isTablet}
         $isDesktop={isDesktop}
