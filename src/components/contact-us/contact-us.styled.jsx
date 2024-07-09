@@ -77,9 +77,6 @@ export const MainBlock = styled.div`
     flex-direction: row;
     justify-content: space-between;
   }
-
-  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
-  }
 `;
 
 export const ContactsBlock = styled.div`
@@ -136,9 +133,6 @@ export const ContactsBox = styled.div`
     color: ${({ theme }) => theme.colors.black};
   }
 
-  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
-  }
-
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
     gap: 16px;
 
@@ -154,9 +148,6 @@ export const SocialsBox = styled.div`
   flex-direction: column;
   gap: 8px;
 
-  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
-  }
-
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
     gap: 16px;
   }
@@ -167,9 +158,6 @@ export const IconsBox = styled.div`
   gap: 32px;
 
   padding: 12px;
-
-  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
-  }
 
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
     gap: 8px;

@@ -1,16 +1,11 @@
 import styled from '@emotion/styled';
-import { Element } from 'react-scroll';
 
-export const Section = styled(Element)`
+export const Section = styled.footer`
   width: 100%;
-  padding-bottom: 36px;
+  padding-bottom: 24px;
 
   @media (${({ theme }) => theme.mediaQueries.minTablet}) {
-    padding-bottom: 100px;
-  }
-
-  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
-    padding-bottom: 120px;
+    padding-bottom: 40px;
   }
 `;
 
@@ -33,6 +28,8 @@ export const Container = styled.div`
     width: 768px;
     padding-left: 30px;
     padding-right: 30px;
+
+    gap: 16px;
   }
 
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
@@ -48,6 +45,18 @@ export const IconsContainer = styled.div`
   align-items: center;
 
   gap: 24px;
+
+  padding-top: 24px;
+
+  border-top: 1px solid ${({ theme }) => theme.colors.green};
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+
+    padding-top: 40px;
+  }
 `;
 
 export const NavBox = styled.div`
@@ -56,6 +65,14 @@ export const NavBox = styled.div`
   align-items: center;
 
   width: 100%;
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+    width: 342px;
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+    width: 459px;
+  }
 `;
 
 export const LogoGroup = styled.div`
@@ -127,12 +144,6 @@ export const Button = styled.button`
 export const IconsBox = styled.div`
   display: flex;
   gap: 8px;
-
-  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
-  }
-
-  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
-  }
 `;
 
 export const ContactsContainer = styled.div`
@@ -146,5 +157,23 @@ export const ContactsContainer = styled.div`
     gap: 16px;
 
     align-items: center;
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+      flex-direction: row;
+      justify-content: space-between;
+
+      width: 342px;
+    }
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+    div {
+      width: 459px;
+    }
   }
 `;

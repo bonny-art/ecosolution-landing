@@ -10,7 +10,7 @@ import imageTablet1x from '../../assets/images/main/hero-tablet@1x.jpg';
 import imageTablet2x from '../../assets/images/main/hero-tablet@2x.jpg';
 import imageDesktop1x from '../../assets/images/main/hero-desktop@1x.jpg';
 import imageDesktop2x from '../../assets/images/main/hero-desktop@2x.jpg';
-import { address } from 'constants/adress';
+import { address, mail } from 'constants/contacts';
 
 export const Main = () => {
   const appStore = useAppStore();
@@ -57,7 +57,7 @@ export const Main = () => {
           <Styled.ContactsBlock>
             <div>
               <button onClick={openGoogleMaps}>{address}</button>
-              <a href="mailto:office@ecosolution.com">office@ecosolution.com</a>
+              <a href={`mailto:${mail}`}>{mail}</a>
             </div>
 
             {!isMobile && <p>ecosolution © 2023</p>}

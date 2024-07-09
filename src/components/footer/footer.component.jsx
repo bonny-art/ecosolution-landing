@@ -4,7 +4,7 @@ import * as Styled from './footer.styled';
 import { useAppStore } from 'store/store';
 import { useInView } from 'react-intersection-observer';
 import { scroller } from 'react-scroll';
-import { address } from 'constants/adress';
+import { address, mail } from 'constants/contacts';
 import { socialLinks } from 'constants/socialLinks';
 import { SocialLink } from 'components/social-link/social-link.container';
 
@@ -49,29 +49,55 @@ export const Footer = () => {
         $isTablet={isTablet}
         $isDesktop={isDesktop}
       >
-        <div>
-          {isMobile ? (
-            <Styled.IconsContainer>
-              <Styled.NavBox>
-                <Styled.LogoGroup onClick={scrollTo('main')}>
-                  <Styled.Logo>
-                    <use href={`${icons}#logo`} />
-                  </Styled.Logo>
-                  <Styled.Name className="name">
-                    <use href={`${icons}#name`} />
-                  </Styled.Name>
-                  <Styled.Slogan>
-                    <use href={`${icons}#slogan`} />
-                  </Styled.Slogan>
-                </Styled.LogoGroup>
+        {isMobile ? (
+          <Styled.IconsContainer>
+            <Styled.NavBox>
+              <Styled.LogoGroup onClick={scrollTo('main')}>
+                <Styled.Logo>
+                  <use href={`${icons}#logo`} />
+                </Styled.Logo>
+                <Styled.Name className="name">
+                  <use href={`${icons}#name`} />
+                </Styled.Name>
+                <Styled.Slogan>
+                  <use href={`${icons}#slogan`} />
+                </Styled.Slogan>
+              </Styled.LogoGroup>
 
-                <Styled.Button onClick={scrollTo('main')}>
-                  <svg>
-                    <use href={`${icons}#arrow-up`} />
-                  </svg>
-                </Styled.Button>
-              </Styled.NavBox>
+              <Styled.Button onClick={scrollTo('main')}>
+                <svg>
+                  <use href={`${icons}#arrow-up`} />
+                </svg>
+              </Styled.Button>
+            </Styled.NavBox>
 
+            <Styled.IconsBox>
+              {socialLinks.map(({ id, href, icon }) => (
+                <SocialLink
+                  key={id}
+                  href={href}
+                  icon={icon}
+                  label={id}
+                  isDark
+                />
+              ))}
+            </Styled.IconsBox>
+          </Styled.IconsContainer>
+        ) : (
+          <Styled.IconsContainer>
+            <Styled.LogoGroup onClick={scrollTo('main')}>
+              <Styled.Logo>
+                <use href={`${icons}#logo`} />
+              </Styled.Logo>
+              <Styled.Name className="name">
+                <use href={`${icons}#name`} />
+              </Styled.Name>
+              <Styled.Slogan>
+                <use href={`${icons}#slogan`} />
+              </Styled.Slogan>
+            </Styled.LogoGroup>
+
+            <Styled.NavBox>
               <Styled.IconsBox>
                 {socialLinks.map(({ id, href, icon }) => (
                   <SocialLink
@@ -83,14 +109,20 @@ export const Footer = () => {
                   />
                 ))}
               </Styled.IconsBox>
-            </Styled.IconsContainer>
-          ) : null}
-        </div>
+
+              <Styled.Button onClick={scrollTo('main')}>
+                <svg>
+                  <use href={`${icons}#arrow-up`} />
+                </svg>
+              </Styled.Button>
+            </Styled.NavBox>
+          </Styled.IconsContainer>
+        )}
 
         <Styled.ContactsContainer>
           <button onClick={openGoogleMaps}>{address}</button>
           <div>
-            <a href="mailto:office@ecosolution.com">office@ecosolution.com</a>
+            <a href={`mailto:${mail}`}>{mail}</a>
             <p>ecosolution © 2023</p>
           </div>
         </Styled.ContactsContainer>

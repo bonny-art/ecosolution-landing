@@ -31,9 +31,6 @@ export const FieldsContainer = styled.div`
   @media (${({ theme }) => theme.mediaQueries.minTablet}) {
     gap: 28px;
   }
-
-  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
-  }
 `;
 
 export const FieldBox = styled.div`
@@ -50,12 +47,6 @@ export const FieldBox = styled.div`
 
     color: ${({ theme }) => theme.colors.error};
     font-size: 12px;
-  }
-
-  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
-  }
-
-  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
   }
 `;
 
@@ -82,9 +73,6 @@ export const Input = styled(Field)`
     color: ${({ theme }) => theme.colors.gray};
   }
 
-  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
-  }
-
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
     height: 33px;
 
@@ -100,6 +88,8 @@ export const TextArea = styled(Field)`
   height: 147px;
   padding-bottom: 8px;
 
+  resize: none;
+
   border: none;
   background-color: transparent;
 
@@ -114,9 +104,6 @@ export const TextArea = styled(Field)`
     font-size: 18px;
 
     color: ${({ theme }) => theme.colors.gray};
-  }
-
-  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
   }
 
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {

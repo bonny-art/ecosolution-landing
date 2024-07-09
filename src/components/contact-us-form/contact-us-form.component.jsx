@@ -35,6 +35,7 @@ export const ContactUsForm = () => {
       }
     );
     actions.setSubmitting(false);
+    actions.resetForm();
   };
 
   return (

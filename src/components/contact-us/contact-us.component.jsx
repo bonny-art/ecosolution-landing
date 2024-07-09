@@ -6,7 +6,9 @@ import { useInView } from 'react-intersection-observer';
 import { socialLinks } from 'constants/socialLinks';
 import { SocialLink } from 'components/social-link/social-link.container';
 import { ContactUsForm } from 'components/contact-us-form/contact-us-form.component';
-import { address } from 'constants/adress';
+import { address, mail } from 'constants/contacts';
+import { phoneNumbers } from 'constants/contacts';
+import { formatPhoneNumber } from 'utils/format-phone';
 
 export const ContactUs = () => {
   const appStore = useAppStore();
@@ -43,28 +45,24 @@ export const ContactUs = () => {
             <Styled.ContactsBox>
               <h3>Phone:</h3>
               <div>
-                <a href="tel:+380981234567">
-                  <Styled.Icon>
-                    <use href={`${icons}#call`} />
-                  </Styled.Icon>
-                  <span>38 (098) 12 34 567</span>
-                </a>
-                <a href="tel:+380931234567">
-                  <Styled.Icon>
-                    <use href={`${icons}#call`} />
-                  </Styled.Icon>
-                  <span>38 (093) 12 34 567</span>
-                </a>
+                {phoneNumbers.map(({ id, number }) => (
+                  <a key={id} href={`tel:${number}`}>
+                    <Styled.Icon>
+                      <use href={`${icons}#call`} />
+                    </Styled.Icon>
+                    <span>{formatPhoneNumber(number)}</span>
+                  </a>
+                ))}
               </div>
             </Styled.ContactsBox>
 
             <Styled.ContactsBox>
               <h3>E-mail:</h3>
-              <a href="mailto:office@ecosolution.com">
+              <a href={`mailto:${mail}`}>
                 <Styled.Icon>
                   <use href={`${icons}#mail`} />
                 </Styled.Icon>
-                <span>office@ecosolution.com</span>
+                <span>{mail}</span>
               </a>
             </Styled.ContactsBox>
 
