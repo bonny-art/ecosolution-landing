@@ -52,7 +52,13 @@ export const BurgerMenu = ({ closeModal }) => {
 
         <Styled.SocialsContainer>
           {socialLinks.map(({ id, href, icon }) => (
-            <SocialLink key={id} href={href} icon={icon} label={id} />
+            <SocialLink
+              key={id}
+              href={href}
+              icon={icon}
+              label={id}
+              isDark={false}
+            />
           ))}
         </Styled.SocialsContainer>
       </Styled.MainContainer>

@@ -1,8 +1,12 @@
 import styled from '@emotion/styled';
 
 export const SocialButton = styled.a`
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme, isDark }) =>
+    isDark ? theme.colors.black : theme.colors.white};
   transition: color ${({ theme }) => theme.animation.transition};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     color: ${({ theme }) => theme.colors.green};

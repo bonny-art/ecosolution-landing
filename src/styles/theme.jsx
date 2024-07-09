@@ -10,6 +10,8 @@ export const theme = Object.freeze({
 
     white: '#f3f5fa',
     offWhite: '#ffffff',
+
+    error: '#d28b8b',
   },
 
   animation: {

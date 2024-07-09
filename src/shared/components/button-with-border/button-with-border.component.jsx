@@ -4,16 +4,11 @@ import * as Styled from './button-with-border.styled';
 import { useAppStore } from 'store/store';
 import { scroller } from 'react-scroll';
 
-export const ButtonWithBorder = ({
-  children,
-  goTo,
-  onClick,
-  type = 'button',
-}) => {
+export const ButtonWithBorder = ({ children, goTo, type = 'button' }) => {
   const appStore = useAppStore();
   const { isDesktop, setActiveSection } = appStore;
 
-  const handleClick = section => () => {
+  const goToSection = section => {
     setActiveSection(section);
 
     const offset = isDesktop ? -120 : -145;
@@ -25,13 +20,17 @@ export const ButtonWithBorder = ({
     });
   };
 
+  const handleClick = section => () => {
+    goToSection(section);
+  };
+
   return (
     <Styled.Button
       type={type}
       to={goTo}
       smooth={true}
       duration={500}
-      onClick={handleClick(goTo)}
+      onClick={goTo ? handleClick(goTo) : null}
     >
       {children}
       <span>

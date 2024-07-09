@@ -16,7 +16,6 @@ export const FAQ = () => {
 
   useEffect(() => {
     if (inViewFaq) {
-      console.log('🚀 ~ inViewFaq:', inViewFaq);
       setActiveSection('faq');
     }
   }, [inViewFaq, setActiveSection]);
