@@ -50,6 +50,7 @@ export const LogoGroup = styled.div`
   display: flex;
   gap: 4px;
   align-items: end;
+  cursor: pointer;
 
   & .name {
     transition: fill ${({ theme }) => theme.animation.transition};

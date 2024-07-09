@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import icons from '../../assets/sprite.svg';
 import * as Styled from './header.styled';
 import { useAppStore } from 'store/store';
+import { scroller } from 'react-scroll';
 
 import { Modal } from 'shared/modal/modal.component';
 import { BurgerMenu } from 'components/burger-menu/burger-menu.component';
@@ -9,7 +10,7 @@ import { ButtonWithDot } from 'shared/components/button-with-dot/button-with-dot
 
 export const Header = () => {
   const appStore = useAppStore();
-  const { isMobile, isTablet, isDesktop } = appStore;
+  const { isMobile, isTablet, isDesktop, setActiveSection } = appStore;
   const [isModalOpened, setIsModalOpened] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -36,6 +37,18 @@ export const Header = () => {
     };
   }, []);
 
+  const scrollTo = section => () => {
+    setActiveSection(section);
+
+    const offset = isDesktop ? -120 : -145;
+
+    scroller.scrollTo(section, {
+      duration: 500,
+      smooth: true,
+      offset: offset,
+    });
+  };
+
   return (
     <>
       <Styled.Header className={isScrolled ? 'scrolled' : ''}>
@@ -44,7 +57,7 @@ export const Header = () => {
           $isTablet={isTablet}
           $isDesktop={isDesktop}
         >
-          <Styled.LogoGroup>
+          <Styled.LogoGroup onClick={scrollTo('main')}>
             <Styled.Logo>
               <use href={`${icons}#logo`} />
             </Styled.Logo>

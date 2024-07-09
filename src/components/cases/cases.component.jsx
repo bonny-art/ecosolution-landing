@@ -93,6 +93,7 @@ export const Cases = () => {
                 spaceBetween: 24,
               },
               1280: {
+                slidesPerView: 2,
                 spaceBetween: 48,
               },
             }}
