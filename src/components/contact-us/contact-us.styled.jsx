@@ -34,18 +34,30 @@ export const Container = styled.div`
     width: 768px;
     padding-left: 30px;
     padding-right: 30px;
+
+    gap: 40px;
   }
 
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
     width: 1280px;
     padding-left: 20px;
     padding-right: 20px;
+
+    gap: 120px;
   }
 `;
 
 export const Title = styled.h2`
   font-family: 'Oswald', sans-serif;
   font-size: 28px;
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+    font-size: 36px;
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+    font-size: 48px;
+  }
 `;
 
 export const Icon = styled.svg`
@@ -59,6 +71,15 @@ export const MainBlock = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+  }
 `;
 
 export const ContactsBlock = styled.div`
@@ -71,6 +92,15 @@ export const ContactsBlock = styled.div`
     font-size: 16px;
     letter-spacing: -0.04em;
     text-transform: none;
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+    width: 255px;
+    gap: 32px;
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+    width: 516px;
   }
 `;
 
@@ -85,29 +115,15 @@ export const ContactsBox = styled.div`
     gap: 12px;
   }
 
-  a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 20px;
-
-    transition: color ${({ theme }) => theme.transitionDuration};
-
-    &:hover {
-      color: ${({ theme }) => theme.colors.green};
-    }
-  }
-
+  a,
   button {
     display: flex;
     align-items: center;
     gap: 8px;
 
-    text-align: left;
     font-family: 'Fira Sans', sans-serif;
     font-size: 20px;
+    text-align: left;
 
     transition: color ${({ theme }) => theme.transitionDuration};
 
@@ -119,12 +135,31 @@ export const ContactsBox = styled.div`
   span {
     color: ${({ theme }) => theme.colors.black};
   }
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+    gap: 16px;
+
+    a,
+    button {
+      font-size: 24px;
+    }
+  }
 `;
 
 export const SocialsBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+    gap: 16px;
+  }
 `;
 
 export const IconsBox = styled.div`
@@ -134,6 +169,23 @@ export const IconsBox = styled.div`
   div {
     padding: 12px;
   }
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+    div {
+      padding: 0;
+    }
+  }
 `;
 
-export const FormBox = styled.div``;
+export const FormBlock = styled.div`
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+    width: 342px;
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+    width: 596px;
+  }
+`;

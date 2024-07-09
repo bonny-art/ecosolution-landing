@@ -10,6 +10,16 @@ export const FormContainer = styled(Form)`
   padding: 36px 12px;
 
   background-color: ${({ theme }) => theme.colors.grayLight};
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+    padding: 36px 24px;
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+    gap: 32px;
+
+    padding: 48px 48px;
+  }
 `;
 
 export const FieldsContainer = styled.div`
@@ -17,6 +27,13 @@ export const FieldsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+    gap: 28px;
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+  }
 `;
 
 export const FieldBox = styled.div`
@@ -33,6 +50,12 @@ export const FieldBox = styled.div`
 
     color: ${({ theme }) => theme.colors.error};
     font-size: 12px;
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
   }
 `;
 
@@ -58,6 +81,19 @@ export const Input = styled(Field)`
 
     color: ${({ theme }) => theme.colors.gray};
   }
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+    height: 33px;
+
+    font-size: 20px;
+
+    &::placeholder {
+      font-size: 20px;
+    }
+  }
 `;
 
 export const TextArea = styled(Field)`
@@ -78,5 +114,18 @@ export const TextArea = styled(Field)`
     font-size: 18px;
 
     color: ${({ theme }) => theme.colors.gray};
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+    height: 149px;
+
+    font-size: 20px;
+
+    &::placeholder {
+      font-size: 20px;
+    }
   }
 `;

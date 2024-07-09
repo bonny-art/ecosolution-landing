@@ -97,9 +97,9 @@ export const ContactUs = () => {
             </Styled.SocialsBox>
           </Styled.ContactsBlock>
 
-          <Styled.FormBox>
+          <Styled.FormBlock>
             <ContactUsForm />
-          </Styled.FormBox>
+          </Styled.FormBlock>
         </Styled.MainBlock>
       </Styled.Container>
     </Styled.Section>
