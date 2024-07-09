@@ -46,7 +46,7 @@ export const TextBlock = styled.div`
   flex-direction: column;
   gap: 24px;
 
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 
   h1 {
     line-height: 1;
