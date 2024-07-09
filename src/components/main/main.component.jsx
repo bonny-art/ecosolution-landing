@@ -10,12 +10,11 @@ import imageTablet1x from '../../assets/images/main/hero-tablet@1x.jpg';
 import imageTablet2x from '../../assets/images/main/hero-tablet@2x.jpg';
 import imageDesktop1x from '../../assets/images/main/hero-desktop@1x.jpg';
 import imageDesktop2x from '../../assets/images/main/hero-desktop@2x.jpg';
+import { address } from 'constants/adress';
 
 export const Main = () => {
   const appStore = useAppStore();
   const { isMobile, isTablet, isDesktop, setActiveSection } = appStore;
-
-  const address = '79005, Ukraine, Lviv street. Shota Rustaveli, 7';
 
   const openGoogleMaps = () => {
     window.open(

@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import { socialLinks } from 'constants/socialLinks';
 import { SocialLink } from 'components/social-link/social-link.container';
 import { ContactUsForm } from 'components/contact-us-form/contact-us-form.component';
+import { address } from 'constants/adress';
 
 export const ContactUs = () => {
   const appStore = useAppStore();
@@ -20,8 +21,6 @@ export const ContactUs = () => {
       setActiveSection('contact-us');
     }
   }, [inViewContactUs, setActiveSection]);
-
-  const address = '79005, Ukraine, Lviv street. Shota Rustaveli, 7';
 
   const openGoogleMaps = () => {
     window.open(
@@ -83,15 +82,13 @@ export const ContactUs = () => {
               <h3>Social Networks:</h3>
               <Styled.IconsBox>
                 {socialLinks.map(({ id, href, icon }) => (
-                  <div key={id}>
-                    <SocialLink
-                      key={id}
-                      href={href}
-                      icon={icon}
-                      label={id}
-                      isDark
-                    />
-                  </div>
+                  <SocialLink
+                    key={id}
+                    href={href}
+                    icon={icon}
+                    label={id}
+                    isDark
+                  />
                 ))}
               </Styled.IconsBox>
             </Styled.SocialsBox>

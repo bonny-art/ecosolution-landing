@@ -164,19 +164,17 @@ export const SocialsBox = styled.div`
 
 export const IconsBox = styled.div`
   display: flex;
-  gap: 8px;
+  gap: 32px;
 
-  div {
-    padding: 12px;
-  }
+  padding: 12px;
 
   @media (${({ theme }) => theme.mediaQueries.minTablet}) {
   }
 
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
-    div {
-      padding: 0;
-    }
+    gap: 8px;
+
+    padding: 0;
   }
 `;
 
