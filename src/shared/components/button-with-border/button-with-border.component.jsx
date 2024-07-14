@@ -4,7 +4,7 @@ import * as Styled from './button-with-border.styled';
 import { useAppStore } from 'store/store';
 import { scroller } from 'react-scroll';
 
-export const ButtonWithBorder = ({ children, goTo, type = 'button' }) => {
+export const ButtonWithBorder = ({ children, goTo }) => {
   const appStore = useAppStore();
   const { isDesktop, setActiveSection } = appStore;
 
@@ -26,7 +26,7 @@ export const ButtonWithBorder = ({ children, goTo, type = 'button' }) => {
 
   return (
     <Styled.Button
-      type={type}
+      type="submit"
       to={goTo}
       smooth={true}
       duration={500}

@@ -28,7 +28,11 @@ export const BurgerMenu = ({ closeModal }) => {
   return (
     <Styled.Container>
       <Styled.CloseButtonContainer>
-        <Styled.CloseButton onClick={closeModal}>
+        <Styled.CloseButton
+          type="button"
+          aria-label="Close modal"
+          onClick={closeModal}
+        >
           <svg>
             <use href={`${icons}#close`} />
           </svg>

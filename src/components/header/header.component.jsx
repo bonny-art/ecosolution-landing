@@ -71,7 +71,11 @@ export const Header = () => {
           </Styled.LogoGroup>
 
           <Styled.MenuBlock>
-            <Styled.MenuButton onClick={openModal}>
+            <Styled.MenuButton
+              type="button"
+              aria-label="Open menu"
+              onClick={openModal}
+            >
               <Styled.MenuIcon>
                 <use href={`${icons}#menu`} />
               </Styled.MenuIcon>

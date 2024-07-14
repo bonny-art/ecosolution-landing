@@ -15,7 +15,11 @@ export const FAQItem = ({ question, answer, isOpen, toggleOpen }) => {
 
   return (
     <Styled.Item>
-      <Styled.Question onClick={toggleOpen}>
+      <Styled.Question
+        type="button"
+        aria-label="Show answer"
+        onClick={toggleOpen}
+      >
         <Styled.Icon isOpen={isOpen}>
           <use href={`${icons}#${isOpen ? 'minus' : 'plus'}`}></use>
         </Styled.Icon>

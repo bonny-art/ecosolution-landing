@@ -98,9 +98,7 @@ export const ContactUsForm = () => {
           </Styled.FieldsContainer>
 
           <div>
-            <ButtonWithBorder type="submit" className="form">
-              Send
-            </ButtonWithBorder>
+            <ButtonWithBorder className="form">Send</ButtonWithBorder>
           </div>
         </Styled.FormContainer>
       )}
