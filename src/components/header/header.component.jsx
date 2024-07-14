@@ -58,7 +58,10 @@ export const Header = () => {
           $isTablet={isTablet}
           $isDesktop={isDesktop}
         >
-          <Styled.LogoGroup onClick={scrollTo('main')}>
+          <Styled.LogoGroup
+            onClick={scrollTo('main')}
+            aria-label="Ecosolution logo"
+          >
             <Styled.Logo>
               <use href={`${icons}#logo`} />
             </Styled.Logo>

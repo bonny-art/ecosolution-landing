@@ -35,6 +35,7 @@ export const Slide = ({ slide }) => {
           </p>
 
           <button
+            type="button"
             onClick={handleClick(description)}
             aria-label={`Read more about ${description}`}
           >

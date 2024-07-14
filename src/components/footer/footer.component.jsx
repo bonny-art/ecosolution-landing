@@ -64,7 +64,10 @@ export const Footer = () => {
                 </Styled.Slogan>
               </Styled.LogoGroup>
 
-              <Styled.Button onClick={scrollTo('main')}>
+              <Styled.Button
+                aria-label="Scroll to top"
+                onClick={scrollTo('main')}
+              >
                 <svg>
                   <use href={`${icons}#arrow-up`} />
                 </svg>
@@ -85,7 +88,10 @@ export const Footer = () => {
           </Styled.IconsContainer>
         ) : (
           <Styled.IconsContainer>
-            <Styled.LogoGroup onClick={scrollTo('main')}>
+            <Styled.LogoGroup
+              onClick={scrollTo('main')}
+              aria-label="Ecosolution logo"
+            >
               <Styled.Logo>
                 <use href={`${icons}#logo`} />
               </Styled.Logo>
@@ -110,7 +116,10 @@ export const Footer = () => {
                 ))}
               </Styled.IconsBox>
 
-              <Styled.Button onClick={scrollTo('main')}>
+              <Styled.Button
+                aria-label="Scroll to top"
+                onClick={scrollTo('main')}
+              >
                 <svg>
                   <use href={`${icons}#arrow-up`} />
                 </svg>
@@ -120,9 +129,17 @@ export const Footer = () => {
         )}
 
         <Styled.ContactsContainer>
-          <button onClick={openGoogleMaps}>{address}</button>
+          <button
+            type="button"
+            aria-label="Open Google Maps for Address"
+            onClick={openGoogleMaps}
+          >
+            {address}
+          </button>
           <div>
-            <a href={`mailto:${mail}`}>{mail}</a>
+            <a href={`mailto:${mail}`} aria-label="Email">
+              {mail}
+            </a>
             <p>ecosolution © 2023</p>
           </div>
         </Styled.ContactsContainer>

@@ -46,7 +46,7 @@ export const ContactUs = () => {
               <h3>Phone:</h3>
               <div>
                 {phoneNumbers.map(({ id, number }) => (
-                  <a key={id} href={`tel:${number}`}>
+                  <a key={id} href={`tel:${number}`} aria-label="Phone Number">
                     <Styled.Icon>
                       <use href={`${icons}#call`} />
                     </Styled.Icon>
@@ -58,7 +58,7 @@ export const ContactUs = () => {
 
             <Styled.ContactsBox>
               <h3>E-mail:</h3>
-              <a href={`mailto:${mail}`}>
+              <a href={`mailto:${mail}`} aria-label="Email">
                 <Styled.Icon>
                   <use href={`${icons}#mail`} />
                 </Styled.Icon>
@@ -68,7 +68,11 @@ export const ContactUs = () => {
 
             <Styled.ContactsBox>
               <h3>Address:</h3>
-              <button onClick={openGoogleMaps}>
+              <button
+                type="button"
+                aria-label="Open Google Maps for Address"
+                onClick={openGoogleMaps}
+              >
                 <Styled.Icon>
                   <use href={`${icons}#map`} />
                 </Styled.Icon>

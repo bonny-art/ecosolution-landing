@@ -66,7 +66,7 @@ export const FAQ = () => {
                   key={index}
                   question={faq.question}
                   answer={faq.answer}
-                  isOpen={index === openIndex}
+                  isOpened={index === openIndex}
                   toggleOpen={toggleFAQ(index)}
                 />
               ))}

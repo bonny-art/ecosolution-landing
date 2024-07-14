@@ -65,12 +65,22 @@ export const Cases = () => {
                 <span> / {`${totalSlides}`.padStart(2, '0')}</span>
               </p>
               <Styled.ButtonsBox>
-                <button onClick={prevSlide} className="custom-button-prev">
+                <button
+                  type="button"
+                  aria-label="Previous Slide"
+                  onClick={prevSlide}
+                  className="custom-button-prev"
+                >
                   <Styled.Icon>
                     <use href={`${icons}#arrow-left`} />
                   </Styled.Icon>
                 </button>
-                <button onClick={nextSlide} className="custom-button-next">
+                <button
+                  type="button"
+                  aria-label="Next Slide"
+                  onClick={nextSlide}
+                  className="custom-button-next"
+                >
                   <Styled.Icon>
                     <use href={`${icons}#arrow-right`} />
                   </Styled.Icon>

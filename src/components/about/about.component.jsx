@@ -53,7 +53,7 @@ export const About = () => {
           <Styled.GridContainer>
             <Styled.GridBlock className="div1">
               <div className="title-block">
-                <Styled.Icon>
+                <Styled.Icon aria-label="Openness">
                   <use href={`${icons}#openness`} />
                 </Styled.Icon>
                 <h3>Openness</h3>
@@ -64,7 +64,7 @@ export const About = () => {
 
             <Styled.GridBlock className="div2">
               <div className="title-block">
-                <Styled.Icon>
+                <Styled.Icon aria-label="Responsibility">
                   <use href={`${icons}#responsibility`} />
                 </Styled.Icon>
                 <h3>Responsibility</h3>
@@ -116,7 +116,7 @@ export const About = () => {
 
             <Styled.GridBlock className="div5">
               <div className="title-block">
-                <Styled.Icon>
+                <Styled.Icon aria-label="Innovation">
                   <use href={`${icons}#innovation`} />
                 </Styled.Icon>
                 <h3>Innovation</h3>
@@ -129,7 +129,7 @@ export const About = () => {
 
             <Styled.GridBlock className="div6">
               <div className="title-block">
-                <Styled.Icon>
+                <Styled.Icon aria-label="Quality">
                   <use href={`${icons}#quality`} />
                 </Styled.Icon>
                 <h3>Quality</h3>

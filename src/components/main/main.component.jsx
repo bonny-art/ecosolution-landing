@@ -57,8 +57,16 @@ export const Main = () => {
 
           <Styled.ContactsBlock>
             <div>
-              <button onClick={openGoogleMaps}>{address}</button>
-              <a href={`mailto:${mail}`}>{mail}</a>
+              <button
+                type="button"
+                aria-label="Open Google Maps for Address"
+                onClick={openGoogleMaps}
+              >
+                {address}
+              </button>
+              <a href={`mailto:${mail}`} aria-label="Email">
+                {mail}
+              </a>
             </div>
 
             {!isMobile && <p>ecosolution © 2023</p>}
