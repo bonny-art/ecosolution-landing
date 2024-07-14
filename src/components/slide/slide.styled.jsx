@@ -4,7 +4,8 @@ export const Slide = styled.div`
   z-index: 1;
   background-color: ${({ theme }) => theme.colors.grayLight};
 
-  &:hover {
+  &:hover,
+  :focus {
     button {
       background-color: ${({ theme }) => theme.colors.black};
       color: ${({ theme }) => theme.colors.green};

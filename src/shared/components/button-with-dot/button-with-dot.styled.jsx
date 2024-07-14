@@ -20,7 +20,8 @@ export const GetInTouch = styled.button`
     color ${({ theme }) => theme.animation.transition},
     background-color ${({ theme }) => theme.animation.transition};
 
-  &:hover {
+  &:hover,
+  :focus {
     color: ${({ theme }) => theme.colors.white};
     background-color: ${({ theme }) => theme.colors.black};
 

@@ -124,7 +124,8 @@ export const ContactsBox = styled.div`
 
     transition: color ${({ theme }) => theme.transitionDuration};
 
-    &:hover {
+    &:hover,
+    :focus {
       color: ${({ theme }) => theme.colors.green};
     }
   }

@@ -16,7 +16,8 @@ export const MenuItem = styled.li`
     color: ${({ theme }) => theme.colors.green};
   }
 
-  &:hover {
+  &:hover,
+  :focus {
     color: ${({ theme }) => theme.colors.white};
   }
 

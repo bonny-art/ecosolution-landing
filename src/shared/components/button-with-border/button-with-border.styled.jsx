@@ -21,7 +21,8 @@ export const Button = styled.button`
     border-color ${({ theme }) => theme.animation.transition},
     background-color ${({ theme }) => theme.animation.transition};
 
-  &:hover {
+  &:hover,
+  :focus {
     color: ${({ theme }) => theme.colors.green};
     border-color: ${({ theme }) => theme.colors.black};
     background-color: ${({ theme }) => theme.colors.black};

@@ -8,7 +8,8 @@ export const SocialButton = styled.a`
   justify-content: center;
   align-items: center;
 
-  &:hover {
+  &:hover,
+  :focus {
     color: ${({ theme }) => theme.colors.green};
   }
 

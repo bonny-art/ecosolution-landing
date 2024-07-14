@@ -64,7 +64,8 @@ export const CloseButton = styled.button`
   color: ${({ theme }) => theme.colors.white};
   transition: color ${({ theme }) => theme.animation.transition};
 
-  &:hover {
+  &:hover,
+  :focus {
     color: ${({ theme }) => theme.colors.green};
   }
 

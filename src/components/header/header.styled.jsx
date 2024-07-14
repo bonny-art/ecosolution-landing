@@ -56,7 +56,8 @@ export const LogoGroup = styled.div`
     transition: fill ${({ theme }) => theme.animation.transition};
   }
 
-  &:hover .name {
+  &:hover .name,
+  :focus .name {
     fill: ${({ theme }) => theme.colors.green};
   }
 `;
@@ -99,7 +100,8 @@ export const MenuButton = styled.button`
   background-color: ${({ theme }) => theme.colors.greenLight};
   transition: background-color ${({ theme }) => theme.animation.transition};
 
-  &:hover {
+  &:hover,
+  :focus {
     background-color: ${({ theme }) => theme.colors.green};
   }
 `;
