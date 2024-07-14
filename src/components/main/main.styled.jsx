@@ -53,13 +53,6 @@ export const TextBlock = styled.div`
     text-transform: uppercase;
   }
 
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
-
   p {
     font-weight: 400;
     font-size: 16px;
@@ -77,12 +70,6 @@ export const TextBlock = styled.div`
       font-size: 48px;
     }
 
-    div {
-      width: 342px;
-      align-items: start;
-      gap: 43px;
-    }
-
     p {
       text-align: left;
     }
@@ -98,15 +85,28 @@ export const TextBlock = styled.div`
       font-size: 64px;
     }
 
-    div {
-      width: 459px;
-      align-items: start;
-      gap: 20px;
-    }
-
     p {
       width: 363px;
     }
+  }
+`;
+
+export const TextBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  @media (${({ theme }) => theme.mediaQueries.minTablet}) {
+    width: 342px;
+    align-items: start;
+    gap: 43px;
+  }
+
+  @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
+    width: 459px;
+    align-items: start;
+    gap: 20px;
   }
 `;
 

@@ -1,14 +1,15 @@
 import styled from '@emotion/styled';
 
-export const GetInTouch = styled.button`
+export const GetInTouch = styled.div`
   border-radius: 500px;
   height: 39px;
-  width: ${({ width }) => width};
+  padding: 10px 16px;
 
-  display: flex;
+  display: inline-flex;
   gap: 12px;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   background-color: ${({ theme }) => theme.colors.green};
 

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import * as Styled from './main.styled';
 import { useAppStore } from 'store/store';
-import { ButtonWithBorder } from 'shared/components/button-with-border/button-with-border.component';
+
 import { useInView } from 'react-intersection-observer';
 
 import imageMobile1x from '../../assets/images/main/hero-mobile@1x.jpg';
@@ -11,6 +11,7 @@ import imageTablet2x from '../../assets/images/main/hero-tablet@2x.jpg';
 import imageDesktop1x from '../../assets/images/main/hero-desktop@1x.jpg';
 import imageDesktop2x from '../../assets/images/main/hero-desktop@2x.jpg';
 import { address, mail } from 'constants/contacts';
+import { DivWithBorder } from 'shared/components/div-with-border/div-with-border.component';
 
 export const Main = () => {
   const appStore = useAppStore();
@@ -44,14 +45,14 @@ export const Main = () => {
         >
           <Styled.TextBlock>
             <h1>RENEWABLE ENERGY For any task</h1>
-            <div>
+            <Styled.TextBox>
               <p>
                 Development and implementation of renewable non-polluting energy
                 sources, generating power generation using energy wind, sun,
                 water, biomass
               </p>
-              <ButtonWithBorder goTo="cases">Learn more</ButtonWithBorder>
-            </div>
+              <DivWithBorder goTo="cases">Learn more</DivWithBorder>
+            </Styled.TextBox>
           </Styled.TextBlock>
 
           <Styled.ContactsBlock>

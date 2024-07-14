@@ -4,7 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useAppStore } from 'store/store';
 import * as Styled from './faq.styled';
-import { ButtonWithDot } from 'shared/components/button-with-dot/button-with-dot.component';
+
+import { DivWithDot } from 'shared/components/div-with-dot/div-with-dot.component';
 
 export const FAQ = () => {
   const appStore = useAppStore();
@@ -54,9 +55,7 @@ export const FAQ = () => {
 
             <Styled.ButtonBox>
               <p>Didn't find the answer to your question? </p>
-              <ButtonWithDot goTo="contact-us" width="130px">
-                Contact Us
-              </ButtonWithDot>
+              <DivWithDot goTo="contact-us">Contact Us</DivWithDot>
             </Styled.ButtonBox>
           </>
         ) : (
@@ -80,9 +79,7 @@ export const FAQ = () => {
 
               <Styled.ButtonBox>
                 <p>Didn't find the answer to your question? </p>
-                <ButtonWithDot goTo="contact-us" width="130px">
-                  Contact Us
-                </ButtonWithDot>
+                <DivWithDot goTo="contact-us">Contact Us</DivWithDot>
               </Styled.ButtonBox>
             </Styled.Sidebar>
           </>

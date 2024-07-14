@@ -1,14 +1,14 @@
 import React from 'react';
 import icons from '../../../assets/sprite.svg';
-import * as Styled from './button-with-dot.styled';
+import * as Styled from './div-with-border.styled';
 import { useAppStore } from 'store/store';
 import { scroller } from 'react-scroll';
 
-export const ButtonWithDot = ({ children, goTo, width, type = 'button' }) => {
+export const DivWithBorder = ({ children, goTo }) => {
   const appStore = useAppStore();
   const { isDesktop, setActiveSection } = appStore;
 
-  const handleClick = section => () => {
+  const goToSection = section => {
     setActiveSection(section);
 
     const offset = isDesktop ? -120 : -145;
@@ -20,21 +20,23 @@ export const ButtonWithDot = ({ children, goTo, width, type = 'button' }) => {
     });
   };
 
+  const handleClick = section => () => {
+    goToSection(section);
+  };
+
   return (
-    <Styled.GetInTouch
-      type={type}
+    <Styled.Button
       to={goTo}
       smooth={true}
       duration={500}
-      width={width}
-      onClick={handleClick(goTo)}
+      onClick={goTo ? handleClick(goTo) : null}
     >
       {children}
       <span>
         <Styled.Icon>
-          <use href={`${icons}#arrow-down`} />
+          <use href={`${icons}#arrow-right`} />
         </Styled.Icon>
       </span>
-    </Styled.GetInTouch>
+    </Styled.Button>
   );
 };

@@ -6,7 +6,8 @@ import { scroller } from 'react-scroll';
 
 import { Modal } from 'shared/modal/modal.component';
 import { BurgerMenu } from 'components/burger-menu/burger-menu.component';
-import { ButtonWithDot } from 'shared/components/button-with-dot/button-with-dot.component';
+
+import { DivWithDot } from 'shared/components/div-with-dot/div-with-dot.component';
 
 export const Header = () => {
   const appStore = useAppStore();
@@ -77,9 +78,7 @@ export const Header = () => {
             </Styled.MenuButton>
 
             {!isMobile && (
-              <ButtonWithDot goTo="contact-us" width="140px">
-                Get in touch
-              </ButtonWithDot>
+              <DivWithDot goTo="contact-us">Get in touch</DivWithDot>
             )}
           </Styled.MenuBlock>
         </Styled.Section>

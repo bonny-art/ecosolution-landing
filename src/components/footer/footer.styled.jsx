@@ -112,13 +112,15 @@ export const Slogan = styled.svg`
   margin-bottom: 8px;
 `;
 
-export const Button = styled.button`
+export const Button = styled.div`
   width: 32px;
   height: 32px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
 
   color: ${({ theme }) => theme.colors.black};
 
