@@ -154,6 +154,12 @@ export const ContactsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  align-items: center;
+
+  button {
+    display: inline-block;
+    width: fit-content;
+  }
 
   div {
     display: flex;

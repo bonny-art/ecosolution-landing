@@ -83,6 +83,12 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
 `;
 
 export const SocialsContainer = styled.div`

@@ -116,6 +116,10 @@ export const ContactsBlock = styled.div`
   padding-top: 24px;
   border-top: 1px solid ${({ theme }) => theme.colors.green};
 
+  button {
+    display: inline-block;
+  }
+
   div {
     display: flex;
     flex-direction: column;

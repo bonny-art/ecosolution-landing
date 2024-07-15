@@ -26,7 +26,7 @@ export const ContactUs = () => {
 
   const openGoogleMaps = () => {
     window.open(
-      `https://www.google.com/maps/search/?q=${encodeURIComponent(address)}`,
+      `https://www.google.com/maps/search/?q=${encodeURIComponent(address.oneRow)}`,
       '_blank'
     );
   };
@@ -76,7 +76,17 @@ export const ContactUs = () => {
                 <Styled.Icon>
                   <use href={`${icons}#map`} />
                 </Styled.Icon>
-                <span>{address}</span>
+                <span>
+                  {isDesktop ? (
+                    address.oneRow
+                  ) : (
+                    <>
+                      {address.partOne}
+                      <br />
+                      {address.partTwo}
+                    </>
+                  )}
+                </span>
               </button>
             </Styled.ContactsBox>
 

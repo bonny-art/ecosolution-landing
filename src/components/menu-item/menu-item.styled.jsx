@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
 
 export const MenuItem = styled.li`
-  display: flex;
+  display: inline-flex;
   gap: 8px;
   align-items: center;
+  width: fit-content;
 
   font-size: 24px;
   line-height: 29px;
@@ -19,10 +20,6 @@ export const MenuItem = styled.li`
   &:hover,
   :focus {
     color: ${({ theme }) => theme.colors.white};
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 8px;
   }
 
   svg {

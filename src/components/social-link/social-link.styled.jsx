@@ -4,7 +4,7 @@ export const SocialButton = styled.a`
   color: ${({ theme, isDark }) =>
     isDark ? theme.colors.black : theme.colors.white};
   transition: color ${({ theme }) => theme.animation.transition};
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 

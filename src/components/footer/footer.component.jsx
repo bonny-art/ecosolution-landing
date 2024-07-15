@@ -36,7 +36,7 @@ export const Footer = () => {
 
   const openGoogleMaps = () => {
     window.open(
-      `https://www.google.com/maps/search/?q=${encodeURIComponent(address)}`,
+      `https://www.google.com/maps/search/?q=${encodeURIComponent(address.oneRow)}`,
       '_blank'
     );
   };
@@ -134,7 +134,7 @@ export const Footer = () => {
             aria-label="Open Google Maps for Address"
             onClick={openGoogleMaps}
           >
-            {address}
+            {address.oneRow}
           </button>
           <div>
             <a href={`mailto:${mail}`} aria-label="Email">

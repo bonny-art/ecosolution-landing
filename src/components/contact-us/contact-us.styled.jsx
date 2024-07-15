@@ -71,6 +71,7 @@ export const MainBlock = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+  width: 100%;
 
   @media (${({ theme }) => theme.mediaQueries.minTablet}) {
     width: 100%;
@@ -114,9 +115,10 @@ export const ContactsBox = styled.div`
 
   a,
   button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
+    width: fit-content;
 
     font-family: 'Fira Sans', sans-serif;
     font-size: 20px;
@@ -132,6 +134,7 @@ export const ContactsBox = styled.div`
 
   span {
     color: ${({ theme }) => theme.colors.black};
+    width: auto;
   }
 
   @media (${({ theme }) => theme.mediaQueries.minDesktop}) {
